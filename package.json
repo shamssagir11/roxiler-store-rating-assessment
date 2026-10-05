@@ -1,0 +1,35 @@
+{
+  "name": "roxiler-store-rating-assessment",
+  "version": "1.0.0",
+  "description": "Full-Stack Store Rating System - Roxiler Systems Coding Assessment",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "prisma:generate": "npm run prisma:generate --prefix server",
+    "prisma:migrate": "npm run prisma:migrate --prefix server",
+    "prisma:seed": "npm run seed --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "roxiler",
+    "store-rating",
+    "fullstack",
+    "react",
+    "express",
+    "postgresql",
+    "prisma"
+  ],
+  "author": "Full Stack Engineer",
+  "license": "MIT"
+}
